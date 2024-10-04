@@ -1,0 +1,29 @@
+opam-version: "2.0"
+maintainer: "opensource@redxfy.com"
+authors: ["Redxfy Group, LLC <opensource@redxfy.com>"]
+homepage: "https://github.com/redxfy/redis-async"
+bug-reports: "https://github.com/redxfy/redis-async/issues"
+dev-repo: "git+https://github.com/redxfy/redis-async.git"
+doc: "https://ocaml.redxfy.com/ocaml-core/latest/doc/redis-async/index.html"
+license: "MIT"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "async"
+  "bignum"
+  "core"
+  "core_kernel"
+  "ppx_jane"
+  "dune"        {>= "2.0.0"}
+]
+synopsis: "Redis client for Async applications"
+description: "
+A client library for Redis versions 6 and higher.
+
+Provides a strongly-typed API with transparent (de)serialization for application-defined
+types.
+
+Supports client tracking and internally uses the RESP3 protocol. 
+"
